@@ -26,10 +26,9 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash(hash, key)
-  pair = key => hash[key]
   if hash[key]
     hash[key] += 1 
   else hash[key] = 1
   end
-  return pair
+  return :key => hash[key]
 end
